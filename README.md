@@ -3,11 +3,11 @@
 Log (or disable) Eloquent lazy-loaded relationships in Laravel 5 to speed up your application.
 
 [![Build Status](https://travis-ci.org/cviebrock/eloquent-log-lazy-loading.svg?branch=master&format=flat)](https://travis-ci.org/cviebrock/eloquent-log-lazy-loading)
-[![Total Downloads](https://poser.pugx.org/cviebrock/eloquent-log-lazy-loading/downloads?format=flat)](https://packagist.org/packages/cviebrock/eloquent-log-lazy-loading)
 [![Latest Stable Version](https://poser.pugx.org/cviebrock/eloquent-log-lazy-loading/v/stable?format=flat)](https://packagist.org/packages/cviebrock/eloquent-log-lazy-loading)
 [![Latest Unstable Version](https://poser.pugx.org/cviebrock/eloquent-log-lazy-loading/v/unstable?format=flat)](https://packagist.org/packages/cviebrock/eloquent-log-lazy-loading)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cviebrock/eloquent-log-lazy-loading/badges/quality-score.png?format=flat)](https://scrutinizer-ci.com/g/cviebrock/eloquent-log-lazy-loading)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Total Downloads](https://poser.pugx.org/cviebrock/eloquent-log-lazy-loading/downloads?format=flat)](https://packagist.org/packages/cviebrock/eloquent-log-lazy-loading)
+[![License](https://poser.pugx.org/cviebrock/eloquent-log-lazy-loading/license?format=flat)](https://packagist.org/packages/cviebrock/eloquent-log-lazy-loading)
 
 
 * [Why You Might Want This Package](#why-you-might-want-this-package)
