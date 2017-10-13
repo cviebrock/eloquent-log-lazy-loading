@@ -10,6 +10,7 @@ Log (or disable) Eloquent lazy-loaded relationships in Laravel 5 to speed up you
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
 
+* [Why You Might Want This Package](#why-you-might-want-this-package)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Bugs, Suggestions and Contributions](#bugs-suggestions-and-contributions)
@@ -17,6 +18,20 @@ Log (or disable) Eloquent lazy-loaded relationships in Laravel 5 to speed up you
 
 
 ---
+
+## Why You Might Want This Package
+
+Eloquent's lazy-loading is great.  You can do `Group::find($id)` in your controller, and then loop through 
+`$group->users` in your template without needing to worry about the database queries that run under-the-hood.
+
+The problem comes when you try and loop through `$group->users->addresses`, or some other relation. You may
+inadvertently be running an SQL query for each iteration of that loop. If you are running a site that gets
+millions of hits a day, this might not be a good thing!
+
+By logging where your script is lazy-loading relationships, you may be able to optimize your application to avoid
+unnecessary database calls. At the very least you can see where the bottlenecks are. And, if you want, you can
+disable lazy-loading entirely and only allow explicitly loaded relations from being accessed.
+
 
 ## Installation
 
