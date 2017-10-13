@@ -4,12 +4,6 @@ trait LogLazyLoading
 {
 
     /**
-     * Whether to disable lazy-loading entirely (instead of just reporting it)
-     * @var bool
-     */
-    protected $disableLazyLoading = false;
-
-    /**
      * Get a relationship value from a method.
      *
      * @param  string $method
@@ -27,7 +21,7 @@ trait LogLazyLoading
             "Attempting to lazy-load relation '$method' on model '$modelName'"
         );
 
-        if ($this->disableLazyLoading) {
+        if (property_exists($this, 'disableLazyLoading') && $this->disableLazyLoading) {
             throw $exception;
         }
 
