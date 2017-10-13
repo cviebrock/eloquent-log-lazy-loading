@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Collection;
 class LogLoadingTest extends TestCase
 {
 
+    /**
+     * @inheritdoc
+     */
     public function setUp()
     {
         parent::setUp();
@@ -15,9 +18,15 @@ class LogLoadingTest extends TestCase
         $this->app->singleton(ExceptionHandler::class, TestExceptionHandler::class);
     }
 
-    public function testLogging()
+    /**
+     * @test
+     * @throws \Exception
+     */
+    public function it_logs_lazy_loading()
     {
         $group = Group::first();
+
+        $this->expectsEvents(TestLoggingEvent::class);
 
         $users = $group->users;
 

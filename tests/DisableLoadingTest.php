@@ -7,7 +7,10 @@ use Cviebrock\EloquentLogLazyLoading\Test\Models\GroupLazyDisabled;
 class DisableLoadingTest extends TestCase
 {
 
-    public function testDisabling()
+    /**
+     * @test
+     */
+    public function it_disables_lazy_loading()
     {
         $group = GroupLazyDisabled::first();
 

@@ -7,9 +7,6 @@ use Illuminate\Database\Schema\Blueprint;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 
-/**
- * Class TestCase
- */
 abstract class TestCase extends Orchestra
 {
 
@@ -62,6 +59,9 @@ abstract class TestCase extends Orchestra
         User::create(['group_id' => $groupId, 'name' => 'Rebecca']);
     }
 
+    /**
+     * @param string $directory
+     */
     protected function initializeDirectory($directory)
     {
         if (File::isDirectory($directory)) {
@@ -70,8 +70,4 @@ abstract class TestCase extends Orchestra
         File::makeDirectory($directory);
     }
 
-    public function getTempDirectory($suffix = '')
-    {
-        return __DIR__ . '/temp' . ($suffix == '' ? '' : '/' . $suffix);
-    }
 }
