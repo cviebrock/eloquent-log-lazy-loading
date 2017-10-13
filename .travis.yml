@@ -1,0 +1,27 @@
+# Travis CI configuration
+
+language: php
+
+php:
+  - 7.0
+  - 7.1
+  - 7.2
+
+env:
+  - COMPOSER_FLAGS="--prefer-stable --prefer-lowest"
+  - COMPOSER_FLAGS=""
+
+matrix:
+  exclude:
+    - php: 7.2
+      env: COMPOSER_FLAGS="--prefer-stable --prefer-lowest"
+
+before_script:
+  - travis_retry composer self-update
+  - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
+
+script:
+  - php vendor/bin/phpunit
+
+after_script:
+  - php vendor/bin/ocular code-coverage:upload --format=php-clover build/clover.xml
