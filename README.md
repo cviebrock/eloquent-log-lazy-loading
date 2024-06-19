@@ -1,5 +1,12 @@
 # Eloquent Log Lazy Loading
 
+> [!WARNING]
+> This package is abandonned as it hasn't been updated since Laravel 5,
+> and the functionality has been baked into recent versions of Laravel via the
+> [Model::handleLazyLoadingViolationUsing](https://laravel.com/docs/9.x/eloquent-relationships#preventing-lazy-loading) method.
+
+---
+
 Log (or disable) Eloquent lazy-loaded relationships in Laravel 5 to speed up your application.
 
 [![Build Status](https://travis-ci.org/cviebrock/eloquent-log-lazy-loading.svg?branch=master&format=flat)](https://travis-ci.org/cviebrock/eloquent-log-lazy-loading)
@@ -10,11 +17,12 @@ Log (or disable) Eloquent lazy-loaded relationships in Laravel 5 to speed up you
 [![License](https://poser.pugx.org/cviebrock/eloquent-log-lazy-loading/license?format=flat)](https://packagist.org/packages/cviebrock/eloquent-log-lazy-loading)
 
 
-* [Why You Might Want This Package](#why-you-might-want-this-package)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Bugs, Suggestions and Contributions](#bugs-suggestions-and-contributions)
-* [Copyright and License](#copyright-and-license)
+- [Eloquent Log Lazy Loading](#eloquent-log-lazy-loading)
+  - [Why You Might Want This Package](#why-you-might-want-this-package)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Bugs, Suggestions and Contributions](#bugs-suggestions-and-contributions)
+  - [Copyright and License](#copyright-and-license)
 
 
 ---
